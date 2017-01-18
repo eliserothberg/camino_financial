@@ -4,9 +4,9 @@ from django.contrib import admin
 
 from django.contrib import admin
 
-from .models import Mobile
+from .models import SMSVerification
 
-admin.site.register(Mobile)
+admin.site.register(SMSVerification)
 
 from .models import Student
 

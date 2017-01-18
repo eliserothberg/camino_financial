@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+            <h1>These are your classes:</h1>
+            <form method="post" action="">
+{% csrf_token %}
+
+                        <p class="bs-component">
+                            <table>
+                                <tr>
+                                    <td>{{ form.class_name.label_tag }}</td>
+                                    <td>{{ form.class.name }}</td>
+                                </tr>
+                            </table>
+                        </p>
+                        <p class="bs-component">
+                            <center>
+                                <input class="btn btn-success btn-sm" type="submit" value="signup" />
+                            </center>
+                        </p>
+                        <input type="hidden" name="next" value="{{ next }}" />
+                    </form>
+                    <table><tr>
+                                   <a href="/logout">Logout</a>
+                                </tr></table>
+        </div>
+    </div>
+</div>
+{% endblock %}

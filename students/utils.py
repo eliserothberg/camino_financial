@@ -12,7 +12,7 @@ from django.conf import settings
 
 from twilio import twiml
 
-from .models import Mobile, Student
+# from .models import Mobile, Student
 
 
 def discover_twilio_credentials(user=None):
@@ -30,6 +30,8 @@ def discover_twilio_credentials(user=None):
         We recommend using environment variables were possible; it is the
         most secure option
     """
+    TWILIO_ACCOUNT_SID = 'ACe340c958d3475ee038f5a3512d224fee'
+    TWILIO_AUTH_TOKEN = 'caa016c683a651cd690bee64c9839a08'
 
     SID = 'TWILIO_ACCOUNT_SID'
     AUTH = 'TWILIO_AUTH_TOKEN'
